@@ -4,69 +4,58 @@
     box-sizing: border-box;
 }
 
-header {
+.navegacion {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     background-color: #0000fe;
-    justify-content: center;
+    justify-content:center;
     position: fixed;
+    height: 100px;
+    height: 100px;
+    padding-top: 17px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.navegacion ul {
+    padding-left: 5%;
 }
 
-header div {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-Header div a {
-    width: 10%;
-}
-
-Header div a img {
-    display: flex;
-    width: 90%;
-    justify-content: center;
-    padding: 10%;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    letter-spacing: 3px;
-}
-
-nav ul {
-    display: flex;
-    width: 70%;
-    justify-content: center;
-}
-
-nav ul li {
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
+.navegacion .container-fluid{
     width: 100%;
 }
 
-nav a {
-    color: #ffeddf;
-    padding: 14px 20px;
-    text-decoration: none;
+.navegacion .nav-item{
+    padding:2%;
+}
+
+.nav-item a{
+    color:#ffffff;
     font-family: 'Asap', sans-serif;
-    transition: all 0.5s;
+    letter-spacing: 2px;
+    width: max-content;
+}
+
+#boton{
+    color: #ffffff;
+    border: none;
+}
+
+#navbar {
+    justify-content:space-around;
+}
+
+.navbar-brand img {
+    width: 90px;
 }
 
 nav li a:hover {
-    padding: 7% 5%;
+    padding: 7% 7%;
     background: #fd7000;
-    color: #ffffff;
+    transition: .5s;
 }
 
-main {
-    padding-top: 100px;
+main{
+    background-color: #0000fe;
+    padding-top: 90px;
 }
 
 .banner-principal {
@@ -108,17 +97,20 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    padding: 5%;
+    place-items: center;
 }
 
 .yo {
+    align-items: center;
     Width: 50%;
     display: flex;
+    padding-left: 5%;
 }
 
 .yo img {
-    width: 100%;
+    width: 70%;
     display: flex;
-    padding: 20%
 }
 
 .mi-presentacion {
@@ -126,10 +118,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: left;
+    vertical-align: middle;
 }
 
 h1 {
-    padding-top: 10%;
     font-family: 'Asap', sans-serif;
     font-size: 50px;
     letter-spacing: 2px;
@@ -141,18 +133,25 @@ h1 {
     font-size: 30px;
     letter-spacing: 1px;
     color: #fd7000;
+}
 
+.mi-presentacion p {
+    font-family: 'Asap', sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: rgb(26, 26, 26);
+    padding-right: 15%;
 }
 
 footer {
     display: flex;
-    background-color: #fd7000;
     flex-direction: row;
+    background-color: #fd7000;
     width: 100%;
     letter-spacing: 3px;
 }
 
-footer div {
+.gatoimg {
     Width: 30%;
     display: flex;
     justify-content: center;
@@ -162,14 +161,15 @@ footer div img {
     width: 40%;
 }
 
-footer ul {
+.navegacionfooter{
+    flex-direction: row;
     padding-top: 5%;
     display: flex;
     width: 50%;
     justify-content: center;
 }
 
-footer ul li {
+.navegacionfooter li {
     display: flex;
     flex-direction: row;
     text-decoration: none;
@@ -178,11 +178,14 @@ footer ul li {
 }
 
 footer a {
+    display: flex;
+    flex-direction: row;
     color: #ffeddf;
     padding: 14px 20px;
     text-decoration: none;
     font-family: 'Asap', sans-serif;
     font-size: small;
+    width: max-content;
 }
 
 .BannerFernanda {
@@ -192,20 +195,23 @@ footer a {
         "exp1 exp2 exp3"
         "skills skills skills";
     grid-template-columns: 5fr 5fr 5fr;
-    grid-template-rows: 5fr 2fr 5fr 5fr;
-    background-color: #00ff00;
+    grid-template-rows: 3fr 2fr 5fr 5fr;
+    background-color:#ffeddf;
+    align-items:center;
+    justify-items: center;
 }
 
 .ficha {
     grid-area: ficha;
-    background-color: #00ff00;
-    padding: 10%;
+    padding:0%;
+    align-items:center;
 }
 
 .fotofer {
     grid-area: foto;
-    padding: 10%;
-    background-color: #00ff00;
+    padding-right: 10%;
+    align-items:center;
+    justify-items: center;
 }
 
 .fotofer img {
@@ -215,7 +221,6 @@ footer a {
 .tituloexp {
     grid-area: titulo;
     background-color: #ffeddf;
-
 }
 
 .exp1 {
@@ -251,10 +256,13 @@ footer a {
         "icono coderhouse"
         "icono coursera"
         "icono universidad";
-    grid-template-columns: 2fr 6fr;
-    grid-template-rows: 2fr 5fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 2fr 3fr 1fr 1fr 1fr;
     border: 3px solid #0000fe;
-    color: #0000fe
+    color: #0000fe;
+    justify-self:center;
+    margin: 10% 20%;
+    height: 320px;
 }
 
 .Vacio {
@@ -268,7 +276,8 @@ footer a {
     border-bottom: 3px solid #0000fe;
     font-family: 'Asap', sans-serif;
     font-weight: 800;
-    padding: 2%;
+    padding: 3%;
+    height:80px;
 }
 
 .Descripcion {
@@ -276,39 +285,41 @@ footer a {
     border-bottom: 3px solid #0000fe;
     font-family: 'Asap', sans-serif;
     font-weight: 300;
-    padding: 2%;
+    height:120px;
 }
 
 .icono {
     grid-area: icono;
     border-right: 3px solid #0000fe;
-    align-items: center;
+    height:120px;
+    justify-self: center;
 }
 
 .estudios {
-    width: 80%;
+    width: 100%;
+    height:120px;
+    justify-self: center;
     align-items: center;
-    padding-left: 15%;
 }
 
 .coderhouse {
     grid-area: coderhouse;
     border-bottom: 3px solid #0000fe;
     font-family: 'Asap', sans-serif;
-    padding: 1%;
+    height:40px;
 }
 
 .coursera {
     grid-area: coursera;
     border-bottom: 3px solid #0000fe;
     font-family: 'Asap', sans-serif;
-    padding: 1%;
+    height:40px;
 }
 
 .universidad {
     grid-area: universidad;
     font-family: 'Asap', sans-serif;
-    padding: 1%;
+    height:40px;
 }
 
 .skills {
@@ -319,12 +330,11 @@ footer a {
     align-items: center;
 }
 
-
 .tienda {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    background-color: #00ff00;
+    background-color: #ffeddf;
     gap: 40px;
     padding: 10%;
 }
@@ -413,12 +423,11 @@ footer a {
 .cuadricula-cont {
     display: flex;
     flex-wrap: wrap;
-    padding: 10%;
     Width: 50%;
 }
 
 .cuadricula-cont img {
-    Width: 100%;
+    Width: 80%;
     display: flex;
 }
 
@@ -427,7 +436,6 @@ footer a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10%;
 }
 
 form {
@@ -446,19 +454,37 @@ form fieldset div {
     padding: 2%;
 }
 
+
 @media screen and (max-width: 1024px) {
     .tienda {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 20px;
     }
+
+    .navegacion {
+        height: auto;
+        background-color: #0000fe;
+    }
 }
 
 @media screen and (max-width: 720px) {
+    .BannerFernanda  { 
+        grid-template:
+            "ficha"
+            "foto"
+            "titulo"
+            "exp1"
+            "exp2"
+            "exp3"
+            "skills";
+     justify-content: center;
+    }
     .tienda {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
-        gap: 10px;
+        gap: 20px;
+        padding-left: 21%;
     }
 }
 
@@ -471,7 +497,127 @@ form fieldset div {
             "rrss2"
             "rrss3"
             "rrss4";
+     justify-content: center;
+    }
+
+    .banner-principal {
+        width: 100%;
+        flex-direction: column;
         align-items: center;
+        padding: 0%;
+    }
+
+    .welcome img {
+        width: 100%;
+        padding: 0%;
+    }
+    
+    .cuadricula {
+        Width: 80%;
+        display: flex;
+    }
+
+    .banner-contacto {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .seccgifojos {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .seccgifojos a {
+        width: 20%;
+    }
+
+    .seccgifojos a img {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        padding-top: 15%;
+    }
+
+    .Formulario {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cuadricula-cont {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 10%;
+    }
+
+    .navegacion {
+        height: auto;
+        background-color: #0000fe;
+    }
+
+    .navegacionfooter {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .contenido {
+        flex-direction: column;
+        width: 100%;
+        place-items: center;
+    }
+
+    .yo {
+        Width: 80%;
+        display: flex;
+        padding: 0%;
+    }
+
+    .yo img {
+        width: 100%;
+    }
+
+    .mi-presentacion {
+        Width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5%;
+        padding-left: 10%;
+    }
+
+    .mi-presentacion h1 {
+        padding-top: 5%;
+        font-family: 'Asap', sans-serif;
+        font-size: 40px;
+        letter-spacing: 2px;
+        color: #0000fe;
+    }
+
+    .mi-presentacion h2 {
+        font-family: 'Asap', sans-serif;
+        font-size: 30px;
+        letter-spacing: 1px;
+        color: #fd7000;
+        padding-bottom: 5%;
+    }
+
+    .mi-presentacion p {
+        padding-top: 0%;
+    }
+
+    .gatoimg {
+        Width: 50%;
+        display: flex;
+        justify-content: center;
+        padding:0%;
+    }
+    
+    footer div img {
+        width: 100%;
+        padding: 0%;
     }
 }
 
@@ -481,20 +627,26 @@ form fieldset div {
         gap: 10px;
         align-items: center;
     }
-}
 
-@media screen and (max-width: 1024px) {
+    .header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #0000fe;
+        justify-content: center;
+        position: fixed;
+    }
+
     .Formulario {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
-}
 
-@media screen and (max-width: 1024px) {
     .cuadricula-cont {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding:0%;
     }
 }
